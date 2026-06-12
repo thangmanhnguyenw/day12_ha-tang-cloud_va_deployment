@@ -1,7 +1,9 @@
 # Delivery Checklist — Day 12 Lab Submission
 
 > **Student Name:** Nguyễn Trần Mạnh Thắng
+> 
 > **Student ID:**2A202600710
+> 
 > **Date:** 12/6/2026
 
 ---
