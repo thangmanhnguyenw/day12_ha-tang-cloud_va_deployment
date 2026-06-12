@@ -157,7 +157,9 @@ async def ask_agent(
         "answer": response_text,
         "usage": {
             "requests_remaining": rate_info["remaining"],
-            "budget_remaining_usd": usage.total_cost_usd,
+            "budget_remaining_usd": max(
+                0, cost_guard.monthly_budget_usd - cost_guard.get_usage(username)["cost_usd"]
+            ),
         },
     }
 
@@ -176,7 +178,7 @@ def admin_stats(user: dict = Depends(verify_token)):
     return {
         "total_users": "N/A (in-memory demo)",
         "global_cost_usd": cost_guard._global_cost,
-        "global_budget_usd": cost_guard.global_daily_budget_usd,
+        "global_budget_usd": cost_guard.global_monthly_budget_usd,
     }
 
 
