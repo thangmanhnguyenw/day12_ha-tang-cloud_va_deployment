@@ -6,71 +6,60 @@
 
 ---
 
+## Submission Requirements
+
+Submit a **GitHub repository** containing:
+
+### 1. Mission Answers (40 points)
+
+Create a file `MISSION_ANSWERS.md` with your answers to all exercises:
+
+```markdown
 # Day 12 Lab - Mission Answers
 
 ## Part 1: Localhost vs Production
 
 ### Exercise 1.1: Anti-patterns found
-
-1. API key hardcode trong code
-2. Không có health check endpoint
-3. Debug mode bật cứng
-4. Không xử lý SIGTERM gracefully
-5. Config không đến từ environment
+1. [Your answer]
+2. [Your answer]
+...
 
 ### Exercise 1.3: Comparison table
-
-
-| Feature      | Develop                 | Production                             | Why Important? |
-| ------------ | ----------------------- | -------------------------------------- | -------------- |
-| Config       | Hardcode trong code     | Đọc từ env vars                        |                |
-| Secrets      | `api_key = "sk-abc123"` | `os.getenv("OPENAI_API_KEY")`          |                |
-| Port         | Cố định `8000`          | Từ `PORT` env var                      |                |
-| Health check | Không có                | `GET /health`                          |                |
-| Shutdown     | Tắt đột ngột            | Graceful — hoàn thành request hiện tại |                |
-| Logging      | `print()`               | Structured JSON logging                |                |
-
-
----
+| Feature | Develop | Production | Why Important? |
+|---------|---------|------------|----------------|
+| Config  | ...     | ...        | ...            |
+...
 
 ## Part 2: Docker
 
 ### Exercise 2.1: Dockerfile questions
-
-1. Base image: `python:3.11`
-2. Working directory: WORKDIR /app
-
+1. Base image: [Your answer]
+2. Working directory: [Your answer]
 ...
 
 ### Exercise 2.3: Image size comparison
-
-- Develop: 1.66 GB 
-- Production: [Y] 236 MB
+- Develop: [X] MB
+- Production: [Y] MB
 - Difference: [Z]%
 
 ## Part 3: Cloud Deployment
 
 ### Exercise 3.1: Railway deployment
-
-- URL: [https://your-app.railway.app](https://your-app.railway.app)
+- URL: https://your-app.railway.app
 - Screenshot: [Link to screenshot in repo]
 
 ## Part 4: API Security
 
 ### Exercise 4.1-4.3: Test results
-
 [Paste your test outputs]
 
 ### Exercise 4.4: Cost guard implementation
-
 [Explain your approach]
 
 ## Part 5: Scaling & Reliability
 
 ### Exercise 5.1-5.5: Implementation notes
-
 [Your explanations and test results]
-
 ```
 
 ---
@@ -80,7 +69,6 @@
 Your final production-ready agent with all files:
 
 ```
-
 your-repo/
 ├── app/
 │   ├── main.py              # Main application
@@ -97,7 +85,6 @@ your-repo/
 ├── .dockerignore            # Docker ignore
 ├── railway.toml             # Railway config (or render.yaml)
 └── README.md                # Setup instructions
-
 ```
 
 **Requirements:**
@@ -201,3 +188,36 @@ done
 
 ---
 
+## Submission
+
+**Submit your GitHub repository URL:**
+
+```
+https://github.com/your-username/day12-agent-deployment
+```
+
+**Deadline:** 17/4/2026
+
+---
+
+## Quick Tips
+
+1. Test your public URL from a different device
+2. Make sure repository is public or instructor has access
+3. Include screenshots of working deployment
+4. Write clear commit messages
+5. Test all commands in DEPLOYMENT.md work
+6. No secrets in code or commit history
+
+---
+
+## Need Help?
+
+- Check [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
+- Review [CODE_LAB.md](CODE_LAB.md)
+- Ask in office hours
+- Post in discussion forum
+
+---
+
+**Good luck! **
